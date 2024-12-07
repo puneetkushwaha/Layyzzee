@@ -1,0 +1,424 @@
+/* Contact Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light background */
+    color: #333; /* Dark text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f2937;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* Ensure logo and nav links don't overflow */
+.logo {
+    font-size: 1.5em; /* Reduced font size */
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 12px; /* Reduced gap between nav items */
+    flex-wrap: wrap; /* Allows the links to wrap on smaller screens */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Reduced font size for links */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#join-us-btn {
+    padding: 10px 20px;
+    background-color: #00d4ff;
+    color: #fff;
+    border: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#join-us-btn:hover {
+    background-color: #007BFF;
+}
+
+
+/* Button Styles for Login/Signup */
+.auth-buttons button {
+    padding: 6px 14px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Smaller font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#login-btn {
+    background-color: #4b5563;
+    color: white;
+}
+
+#login-btn:hover {
+    background-color: #6b7280;
+}
+
+#signup-btn {
+    background-color: #00d4ff;
+    color: black;
+}
+
+#signup-btn:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.contact-container {
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #00d4ff;
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+}
+
+.contact-container h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+/* Hide nav links by default for small screens */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+/* Show nav links when the change class is applied */
+.nav-links.change {
+    display: flex;
+}
+
+/* Media query to show the hamburger on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.change {
+        display: flex;
+        flex-direction: column;
+        background-color: #0c0c0c;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border: 1px solid #0f0e0e;
+        border-radius: 5px;
+        padding: 10px;
+        height: 60vh;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus, textarea:focus {
+    border-color: #00d4ff;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00d4ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1f2937; /* Dark background */
+    color: white; /* Text color */
+    padding: 15px 0; /* Increased padding for better spacing */
+    text-align: center; /* Center-align content */
+    margin-top: auto; /* Ensure it stays at the bottom */
+    position: relative; /* Add a relative position for flexibility */
+    width: 100%; /* Ensure it spans the entire width */
+}
+
+.footer-container {
+    max-width: 1200px; /* Limit the width of footer content */
+    margin: 0 auto; /* Center the footer content */
+    padding: 10px 20px; /* Inner spacing */
+}
+
+.footer-links {
+    display: flex; /* Flex layout for horizontal alignment */
+    justify-content: center; /* Center-align items */
+    gap: 15px; /* Space between links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.footer-links a {
+    color: #00d4ff; /* Light blue for links */
+    text-decoration: none; /* No underline */
+    font-size: 0.9em; /* Reduced font size */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.footer-links a:hover {
+    color: white; /* White on hover */
+}
+
+.footer-social {
+    display: flex; /* Align icons in a row */
+    justify-content: center; /* Center-align icons */
+    gap: 15px; /* Space between icons */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.footer-social a img {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon height */
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+footer p {
+    font-size: 0.8em; /* Small font size for copyright */
+    color: #9ca3af; /* Light gray text */
+    margin-top: 10px; /* Space above copyright text */
+}
+
+/* Social Media Icon Styling */
+.social-media a {
+    color: #e6e6e6; /* Icon color */
+    padding: 0 10px; /* Space between icons */
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+    margin-bottom: 0;
+}
+
+.social-media a:hover {
+    color: #ff4081; /* Hover color */
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #4CAF50; /* Green color for success */
+}
+
+.success-message a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.success-message a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+
+/* For smaller screens (tablets and below) */
+@media (max-width: 768px) {
+    .contact-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contact-section {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .auth-buttons {
+        margin-right: 10px;
+    }
+}
+
+/* For even smaller screens (phones) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .auth-buttons {
+        margin-right: 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-social {
+        gap: 12px;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+    .nav-links{
+        display: none;
+    }
+    
+    .change{
+        background-color: black;
+        height: 50vh;
+        margin: 50;
+        position: absolute;
+        font-size: 20px;
+        top: 30%;
+        left: auto;
+        z-index: -100;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+    }
+}

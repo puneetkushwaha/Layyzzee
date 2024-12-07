@@ -1,0 +1,466 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light background */
+    color: #333; /* Dark text */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f2937;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* Ensure logo and nav links don't overflow */
+.logo {
+    font-size: 1.5em; /* Reduced font size */
+    font-weight: bold;
+    color: #00d4ff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 12px; /* Reduced gap between nav items */
+    flex-wrap: wrap; /* Allows the links to wrap on smaller screens */
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* Reduced font size for links */
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00d4ff;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  #join-us-btn {
+    padding: 10px 20px;
+    background-color: #00d4ff;
+    color: #fff;
+    border: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  #join-us-btn:hover {
+    background-color: #000000;
+  }
+
+/* Button Styles for Login/Signup */
+.auth-buttons button {
+    padding: 6px 14px; /* Reduced padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Smaller font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#login-btn {
+    background-color: #4b5563;
+    color: white;
+}
+
+#login-btn:hover {
+    background-color: #6b7280;
+}
+
+#signup-btn {
+    background-color: #00d4ff;
+    color: black;
+}
+
+#signup-btn:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Image Styling (Profile Picture) */
+.profile-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Image Styling (Profile Picture) */
+.profile-image {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-image img {
+    width: 180px; /* Set a fixed size for the profile image */
+    height: 180px;
+    object-fit: cover; /* Ensure the image doesn't stretch but fills the box */
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid #00d4ff; /* Optional: border around the profile image */
+    transition: transform 0.3s ease; /* Smooth transform effect */
+    
+}
+
+.profile-image img:hover {
+    transform: scale(1.05); /* Slightly scale the image on hover */
+    
+}
+
+/* Center Heading and Adjust Spacing */
+.contact-section {
+    
+    text-align: center; /* Center-align the content */
+    padding: 40px 0; /* Adjust padding for better spacing */
+    
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px; /* Space between heading and profile image */
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    color: #333; /* Dark color for icons */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00d4ff; /* Change color on hover */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 10px 0; /* Reduced padding */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    max-height: 70px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    font-size: 0.7em; /* Reduced font size */
+    color: #9ca3af;
+}
+
+
+
+
+.social-media a {
+    color: #e6e6e6; /* Icon color */
+    padding: 0 10px; /* Space between icons */
+    font-size: 1.5em; /* Icon size */
+    transition: color 0.3s; /* Smooth color transition */
+    margin-bottom: 0;
+}
+
+.social-media a:hover {
+    color: #ff4081; /* Hover color */
+}/* Card Container */
+.card {
+    max-width: 350px;
+    margin: 40px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.card-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px 20px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card-content p {
+    color: #555;
+    font-size: 1em;
+    margin: 5px 0;
+}
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+  
+  /* Hide nav links by default for small screens */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Show nav links when the change class is applied */
+  .nav-links.change {
+    display: flex;
+  }
+  
+  /* Media query to show the hamburger on smaller screens */
+  @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+  
+    nav ul {
+        display: none;
+    }
+  
+    nav ul.change {
+        display: flex;
+        flex-direction: column;
+        background-color: #0c0c0c;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border: 1px solid #0f0e0e;
+        border-radius: 5px;
+        padding: 10px;
+        height: 60vh;
+    }
+  
+    nav ul li {
+        margin: 10px 0;
+    }
+  }
+  
+/* Social Media Icons */
+.card-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+}
+
+.card-social a {
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.card-social a:hover {
+    color: #00d4ff;
+    transform: scale(1.2);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/* Profile Image */
+.profile-image img {
+    width: 100px; /* Adjusted size for smaller screens */
+    height: 100px;
+}
+
+@media (min-width: 768px) {
+    .profile-image img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 20px 10px;
+}
+
+.contact-section h2 {
+    font-size: 1.5em;
+}
+
+/* Social Media Icons */
+.social-icons {
+    gap: 10px;
+}
+
+.social-icons a {
+    font-size: 1.2em;
+}
+
+/* Cards */
+.card {
+    max-width: 100%; /* Full width by default */
+    margin: 20px auto;
+}
+
+.card-image img {
+    height: auto; /* Adjust height dynamically */
+}
+
+.card-content h3 {
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    .card {
+        max-width: 350px; /* Larger cards for larger screens */
+    }
+
+    .card-content h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+}
+
+.footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer p {
+        font-size: 0.6em; /* Reduce footer font size */
+    }
+
+    .social-icons a {
+        font-size: 1em;
+    }
+    .nav-links{
+        display: none;
+    }
+    
+    .change{
+        background-color: black;
+        height: 50vh;
+        margin: 50;
+        position: absolute;
+        font-size: 20px;
+        top: 30%;
+        left: auto;
+        z-index: -100;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+    }
+}

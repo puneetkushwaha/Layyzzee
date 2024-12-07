@@ -1,0 +1,598 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6; /* Light background */
+    color: #333; /* Dark text */
+    line-height: 1.6;
+}
+/* General Styling for Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.auth-buttons button {
+    background-color: #00d4ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background-color: #0288d1;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Hide navigation links by default */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        width: 200px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        display: block;
+    }
+
+    .nav-links.mobile {
+        display: block; /* Show links when hamburger is clicked */
+    }
+
+    
+
+    .hamburger {
+        display: flex;
+        
+        /* Show hamburger menu on small screens */
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #2d2d2d; /* Dark background */
+    color: #f3f4f6; /* Light text */
+}
+
+header {
+    background-color: #1f2937;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.mode-toggle {
+    background-color: transparent;
+    border: none;
+    color: #00d4ff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mode-toggle:hover {
+    color: #22c55e; /* Green color on hover */
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+.auth-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+#join-us-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#join-us-btn:hover {
+    background-color: #000000;
+}
+
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom right, #1e3a8a, #00d4ff);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+/* Hero Buttons Container */
+.hero-buttons {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 20px; /* Adds space between the buttons */
+    margin-top: 30px; /* Adds space from the top */
+}
+
+.hero-buttons a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px; /* Adds padding inside the button */
+    font-size: 1.1em; /* Adjusts the font size */
+    border: none; /* Removes border */
+    border-radius: 8px; /* Rounds the corners */
+    cursor: pointer; /* Adds pointer on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Explore Notes Button */
+#explore-notes-btn {
+    background-color: #ffffff; /* Blue background for Notes button */
+    color: rgb(0, 0, 0); /* White text */
+    font-weight: bold; /* Bold text */
+}
+
+#explore-notes-btn:hover {
+    background-color: #000000; /* Darker blue when hovered */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Master Course Button */
+#master-course-btn {
+    background-color: #000000; /* Green background for Courses button */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+}
+
+#master-course-btn:hover {
+    background-color: #ffffff; /* Darker green when hovered */
+    color: rgb(0, 0, 0);
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column; /* Stacks the buttons vertically on smaller screens */
+        gap: 15px; /* Reduces the gap between buttons */
+    }
+
+    button {
+        font-size: 1em; /* Slightly smaller text on mobile */
+        padding: 10px 20px; /* Adjusts padding on mobile */
+    }
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons button {
+    margin: 10px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Recommended Courses Section */
+.recommended-courses {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.recommended-courses h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #1f2937;
+}
+
+/* Courses Container */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Course Card */
+.course-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Image */
+.course-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Course Content */
+.course-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.course-content h3 {
+    font-size: 0.9em;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.course-content h2 {
+    font-size: 1.5em;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.course-content p {
+    font-size: 0.95em;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.course-content a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.course-content a:hover {
+    text-decoration: underline;
+}
+
+/* Start Button */
+.start-btn {
+    display: inline-block;
+    background: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    max-height: 70px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    font-size: 0.7em;
+    color: #9ca3af;
+}
+
+/* Social Media Icons */
+.social-media a {
+    color: #e6e6e6;
+    padding: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s;
+    margin-bottom: 0;
+}
+
+.social-media a:hover {
+    color: #ff4081;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .recommended-courses h1 {
+        font-size: 2.2em;
+    }
+
+    .courses-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .start-btn {
+        font-size: 0.9em;
+    }
+
+    .courses-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-social {
+        flex-direction: column;
+    }
+    .nav-links{
+        display: none;
+    }
+    
+    .change{
+        background-color: black;
+        height: 80vh;
+        margin: 0;
+        position: absolute;
+        font-size: 20px;
+        top: 40%;
+        left: auto;
+        z-index: -100;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px;
+    }
+}
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+  
+  /* Hide nav links by default for small screens */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Show nav links when the change class is applied */
+  .nav-links.change {
+    display: flex;
+  }
+  
+  /* Media query to show the hamburger on smaller screens */
+  @media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+  
+    nav ul {
+        display: none;
+    }
+  
+    nav ul.change {
+        display: flex;
+        flex-direction: column;
+        background-color: #0c0c0c;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        border: 1px solid #0f0e0e;
+        border-radius: 5px;
+        padding: 10px;
+        height: 80vh;
+    }
+  
+    nav ul li {
+        margin: 1px 0;
+    }
+  }
+  
